@@ -1,0 +1,217 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Form Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        }
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            width: 80%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-height: 60px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .section h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #555;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        input[type="radio"] {
+            transform: scale(1.2);
+        }
+        label {
+            font-size: 14px;
+            color: #555;
+        }
+        .remarks, .submit-button {
+            grid-column: span 3;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .remarks input[type="text"] {
+            font-size: 16px;
+        }
+        .submit-button button {
+            padding: 15px 30px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+        .submit-button button:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="Logo.png" alt="Left Company Logo" />
+            <h1>Insurance Claim</h1>
+            <img src="Logo.png" alt="Right Company Logo" />
+        </div>
+        <!-- Form Grid -->
+        <form class="form-grid">
+            <!-- Left Section -->
+            <div class="section">
+                <h3>Left Section</h3>
+                <input type="text" placeholder="Field 1" />
+                <input type="text" placeholder="Field 2" />
+                <input type="text" placeholder="Field 3" />
+                <input type="text" placeholder="Field 4" />
+                <input type="text" placeholder="Field 5" />
+            </div>
+            <!-- Center Section -->
+            <div class="section">
+                <h3>Center Section</h3>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 1" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="center_field1" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="center_field1" value="No" /> No</label>
+                        <label><input type="radio" name="center_field1" value="N/A" /> N/A</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 2" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="center_field2" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="center_field2" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 3" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="center_field3" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="center_field3" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 4" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="center_field4" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="center_field4" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 5" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="center_field5" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="center_field5" value="No" /> No</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Section -->
+            <div class="section">
+                <h3>Right Section</h3>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 1" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="right_field1" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="right_field1" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 2" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="right_field2" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="right_field2" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 3" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="right_field3" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="right_field3" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 4" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="right_field4" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="right_field4" value="No" /> No</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Field 5" />
+                    <div class="radio-group">
+                        <label><input type="radio" name="right_field5" value="Yes" /> Yes</label>
+                        <label><input type="radio" name="right_field5" value="No" /> No</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Remarks Section -->
+            <div class="remarks">
+                <h3>Remarks</h3>
+                <input type="text" placeholder="Remarks" />
+            </div>
+            <!-- Submit Button -->
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
